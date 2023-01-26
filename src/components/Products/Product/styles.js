@@ -1,6 +1,8 @@
-import { makeStyles } from '@mui/material/styles';
+import * as React from 'react';
+import { makeStyles } from '@mui/styles';
+import Button from '@mui/material/Button';
 
-export default makeStyles(() => ({
+const useStyles = makeStyles(() => ({
   root: {
     // maxWidth: 345, original width style
     maxWidth: '100%',
@@ -15,6 +17,9 @@ export default makeStyles(() => ({
   },
   cardContent: {
     display: 'flex',
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
   },
 }));
+
+export default useStyles
+  
