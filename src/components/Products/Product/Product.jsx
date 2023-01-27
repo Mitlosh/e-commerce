@@ -4,7 +4,6 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
@@ -19,24 +18,24 @@ const Product = ({ product }) => {
       <CardMedia
         className={classes.media} image={product.image} title={product.name}
       />
-      <CardContent className={classes.cardContent}>
-        <div className={classes.CardContent}>
+      <CardContent>
+        <div className={classes.cardContent}>
             <Typography variant='h5' gutterBottom>
                 {product.name}
             </Typography>
             <Typography variant='h5'>
                 {product.price}
             </Typography>
-            <Typography variant='body2' color="textSecondary">
-                {product.description}
-            </Typography>
-            <CardActions disableSpacing className={classes.cardActions}>
-                <IconButton aria-label='Add to Cart'>
-                    <AddShoppingCartIcon />
-                </IconButton>
-            </CardActions>
         </div>
+        <Typography variant='body2' color="textSecondary">
+            {product.description}
+        </Typography>
       </CardContent>
+        <CardActions disableSpacing className={classes.cardActions}>
+            <IconButton aria-label='Add to Cart'>
+                <AddShoppingCartIcon />
+            </IconButton>
+        </CardActions>
     </Card>
 
     // <Card className={classes.root}>

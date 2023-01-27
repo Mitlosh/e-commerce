@@ -1,6 +1,4 @@
-import * as React from 'react';
 import { makeStyles } from '@mui/styles';
-import Button from '@mui/material/Button';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -9,7 +7,7 @@ const useStyles = makeStyles(() => ({
   },
   media: {
     height: 0,
-    paddingTop: '56.25%', // 16:9
+    paddingTop: '50%', // 16:9
   },
   cardActions: {
     display: 'flex',
@@ -17,7 +15,7 @@ const useStyles = makeStyles(() => ({
   },
   cardContent: {
     display: 'flex',
-    // justifyContent: 'space-between',
+    justifyContent: 'space-between',
   },
 }));
 

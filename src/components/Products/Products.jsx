@@ -1,6 +1,6 @@
 import React from 'react'
-import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
+import useStyles from './styles';
 
 import Product from './Product/Product';
 
@@ -15,8 +15,11 @@ const productsArray = [
 ]
 
 const Products = () => {
+  const classes = useStyles()
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <main className={classes.content}>
+      <div className={classes.toolbar} />
       <Grid container justify='center' spacing={4}>
         {productsArray.map((product) => (
           <Grid xs={12} sm={6} md={4} lg={3} key={product.id}>
@@ -24,7 +27,7 @@ const Products = () => {
           </Grid>
         ))}
       </Grid>
-    </Box>
+    </main>
   )
 }
 
