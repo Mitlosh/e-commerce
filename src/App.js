@@ -4,11 +4,12 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-import Products from './components/Products/Products';
+import { Products, Navbar } from './components'
 
 const App = () => {
   return (
     <div>
+      <Navbar />
       <Products />
     </div>
   )

@@ -22,7 +22,7 @@ const Products = () => {
       <div className={classes.toolbar} />
       <Grid container justify='center' spacing={4}>
         {productsArray.map((product) => (
-          <Grid xs={12} sm={6} md={4} lg={3} key={product.id}>
+          <Grid xs={12} sm={6} md={4} lg={4} key={product.id}>
             <Product product={product}/>
           </Grid>
         ))}
