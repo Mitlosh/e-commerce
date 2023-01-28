@@ -1,22 +1,20 @@
 import React from 'react'
 
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { Card, CardActions, CardContent, CardMedia, IconButton, Typography } from '@mui/material'
+
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart'
 
 import useStyles from './styles'
 
 const Product = ({ product }) => {
   const classes = useStyles()
 
+  console.log(product)
+
   return (
     <Card className={classes.root}>
       <CardMedia
-        className={classes.media} image={product.image} title={product.name}
+        className={classes.media} image={product.image.url} title={product.name}
       />
       <CardContent>
         <div className={classes.cardContent}>
@@ -24,12 +22,10 @@ const Product = ({ product }) => {
                 {product.name}
             </Typography>
             <Typography variant='h5'>
-                {product.price}
+                {product.price.formatted_with_symbol}
             </Typography>
         </div>
-        <Typography variant='body2' color="textSecondary">
-            {product.description}
-        </Typography>
+        <Typography dangerouslySetInnerHTML={{__html: product.description}} variant='body2' color="textSecondary"/>
       </CardContent>
         <CardActions disableSpacing className={classes.cardActions}>
             <IconButton aria-label='Add to Cart'>

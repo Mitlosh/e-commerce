@@ -2,12 +2,16 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
-    marginTop: '5em'
+    marginTop: '4.75em',
   },
   content: {
     flexGrow: 1,
     width: '90%',
-    margin: '0 auto'
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    margin: '0 auto',
+
     // backgroundColor: theme.palette.background.default,
     // padding: theme.spacing(3),
   },
